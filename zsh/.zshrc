@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+ export PATH=$HOME/bin:/usr/local/bin:$HOME/.dotnet/tools:/usr/share/dotnet:/usr/share/dotnet/sdk:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -99,3 +99,16 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+eval $(thefuck --alias)
+
+alias checkout="~/dev/checkout/ROSS-MVEcom-Checkout/src/"
+alias configuration="~/dev/checkout/ROSS-MVEcom-Configuration/"
+alias oneweb="~/dev/checkout/ROSS-MVEcom-OneWeb/src/OneWeb/"
+alias owe="~/dev/checkout/ROSS-MVEcom-Owe/src/"
+alias owedto="~/dev/checkout/ROSS-MVEcom-OweDto/src/OweDto"
+alias navaccessor="~/dev/checkout/ROSS-MVEcom-NavAccessor/src/NavAccessor"
+alias navdto="~/dev/checkout/ROSS-MVEcom-NavDto/src/NavDto"
+alias payment="~/dev/checkout/ROSS-MVEcom-Payment/src/"
+alias salesorder="~/dev/checkout/ROSS-MVEcom-SalesOrder/src/"
+alias salesorderpromising="~/dev/checkout/ROSS-MVEcom-SalesOrderPromising/src/"
