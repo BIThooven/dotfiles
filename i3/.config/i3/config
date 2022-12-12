@@ -319,8 +319,7 @@ workspace $ws9 output DP3
 # bind program to workspace and focus to them on startup:
 assign [class="Slack"] $ws1
 assign [class="discord"] $ws1
-#assign [class="Microsoft Teams - Preview"] $ws1
-#assign [class="teams-for-linux"] $ws1
+assign [class="teams-for-linux"] $ws1
 for_window [class="Spotify"] move to workspace $ws2
 assign [class="(?i)firefox"] $ws3
 assign [class="jetbrains-rider"] $ws4
