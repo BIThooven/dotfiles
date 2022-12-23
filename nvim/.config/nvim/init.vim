@@ -19,7 +19,18 @@ filetype plugin on
 set ttyfast                 " Speed up scrolling in Vim
 
 call plug#begin()
- Plug 'dracula/vim'
+ Plug 'dracula/vim', { 'as': 'dracula' }
  Plug 'ryanoasis/vim-devicons'
  Plug 'mhinz/vim-startify'
 call plug#end()
+
+" color schemes
+ if (has("termguicolors"))
+ set termguicolors
+ endif
+ syntax enable
+" colorscheme evening
+ colorscheme dracula 
+" open new split panes to right and below
+ set splitright
+ set splitbelow
