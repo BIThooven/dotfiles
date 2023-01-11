@@ -98,6 +98,11 @@ let g:WhichKeyDesc_errors_prev = "<leader>ep Go to previous error in solution"
 "" ========================================================
 
 inoremap jj <Esc>
+nmap l o<Esc>
+nmap L O<Esc>
+nmap h :nop<CR>
+nmap j :nop<CR>
+nmap k :nop<CR>
 
 " Tab navigation
 nnoremap <A-n> :tabnext<CR>

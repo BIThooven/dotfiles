@@ -27,6 +27,11 @@ set noundofile
 
 " Custom maps
 inoremap jj <Esc>
+nmap l o<Esc>
+nmap L O<Esc>
+nmap h :nop<CR>
+nmap j :nop<CR>
+nmap k :nop<CR>
 
 call plug#begin()
  Plug 'dracula/vim', { 'as': 'dracula' }
