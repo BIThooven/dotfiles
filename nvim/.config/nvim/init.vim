@@ -34,6 +34,7 @@ nmap h :nop<CR>
 nmap j :nop<CR>
 nmap k :nop<CR>
 nnoremap <leader>x :NERDTree<CR>
+nnoremap <leader>X :NERDTreeToggle<CR>
 
 call plug#begin()
  Plug 'dracula/vim', { 'as': 'dracula' }
