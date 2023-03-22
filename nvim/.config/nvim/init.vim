@@ -50,7 +50,7 @@ nnoremap('<leader>dn', 'lua vim.lsp.diagnostic.goto_next()')
 nnoremap('<leader>dN', 'lua vim.lsp.diagnostic.goto_prev()')
 nnoremap('<leader>dd', 'Telescope lsp_document_diagnostics')
 nnoremap('<leader>dD', 'Telescope lsp_workspace_diagnostics')
-nnoremap('<leader>xx', 'Telescope lsp_code_actions')
+nnoremap('<leader>mm', 'Telescope lsp_code_actions')
 nnoremap('<leader>xd', '%Telescope lsp_range_code_actions')
 
 nnoremap <C-t> <cmd>Telescope find_files<cr>

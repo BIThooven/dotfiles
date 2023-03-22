@@ -97,12 +97,24 @@ let g:WhichKeyDesc_errors_prev = "<leader>ep Go to previous error in solution"
 "" Key mappings
 "" ========================================================
 
+" Exit insert mode
 inoremap jj <Esc>
+
+" Go to start/end of line in insert mode
+inoremap <C-b> <Esc>^i
+inoremap <C-e> <End>
+
+" Make a newline from normal mode
 nmap l o<Esc>
 nmap L O<Esc>
+ 
+" Disable hjk
 nmap h :nop<CR>
 nmap j :nop<CR>
 nmap k :nop<CR>
+
+" Copy entire file
+nmap <C-c> <cmd> %y+ <CR>
 
 " Tab navigation
 nnoremap <A-n> :tabnext<CR>
