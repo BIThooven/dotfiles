@@ -105,16 +105,22 @@ inoremap <C-b> <Esc>^i
 inoremap <C-e> <End>
 
 " Make a newline from normal mode
-nmap l o<Esc>
-nmap L O<Esc>
- 
-" Disable hjk
-nmap h :nop<CR>
-nmap j :nop<CR>
-nmap k :nop<CR>
+nnoremap l o<Esc>
+nnoremap L O<Esc>
 
-" Copy entire file
-nmap <C-c> <cmd> %y+ <CR>
+" Toggle relative numbers
+nnoremap <leader>mm :set rnu! <CR>
+
+" Clear highlights
+nnoremap <Esc> :noh <CR>
+
+" Disable hjk
+nnoremap h :nop<CR>
+nnoremap j :nop<CR>
+nnoremap k :nop<CR>
+
+" Copy entire file (not working?)
+nnoremap <C-c> :%y+ <CR>
 
 " Tab navigation
 nnoremap <A-n> :tabnext<CR>
