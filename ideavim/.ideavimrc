@@ -119,7 +119,7 @@ nnoremap h :nop<CR>
 nnoremap j :nop<CR>
 nnoremap k :nop<CR>
 
-" Copy entire file (not working?)
+" Copy entire file
 nnoremap <C-c> :%y+ <CR>
 
 " Tab navigation
@@ -187,7 +187,7 @@ map <leader>fl <action>(RecentLocations)
 map <leader>fs <action>(NewScratchFile)
 
 " Close active tab
-map <leader>q <action>(CloseContent)
+map <C-q> <action>(CloseContent)
 
 " Refactoring
 map <leader>rn <Action>(RenameElement)
