@@ -20,6 +20,7 @@ M.general = {
 		["<leader>ta"] = {
 			function()
 				require("neotest").run.run(vim.fn.expand("%"))
+				require("neotest").summary.open()
 			end,
 			"run tests in current file",
 		},
