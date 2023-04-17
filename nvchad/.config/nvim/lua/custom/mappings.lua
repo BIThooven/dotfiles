@@ -10,19 +10,20 @@ M.general = {
 		["L"] = { "O<ESC>", "newline before cursor" },
 
 		-- Run tests
-		["<leader>t"] = {
+		["<leader>tt"] = {
 			function()
 				require("neotest").run.run()
+				require("neotest").summary.open()
 			end,
 			"run neastest test",
 		},
-		["<leader>T"] = {
+		["<leader>ta"] = {
 			function()
 				require("neotest").run.run(vim.fn.expand("%"))
 			end,
 			"run tests in current file",
 		},
-		["<leader>dt"] = {
+		["<leader>td"] = {
 			function()
 				require("neotest").run.run({ strategy = "dap" })
 			end,
@@ -62,7 +63,11 @@ M.general = {
 		},
 
 		-- Trouble (show errors)
-		["<leader>ww"] = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Toggle trouple with workspace diagnostics", opts = { silent = true, noremap = true } },
+		["<leader>ww"] = {
+			"<cmd>TroubleToggle workspace_diagnostics<cr>",
+			"Toggle trouple with workspace diagnostics",
+			opts = { silent = true, noremap = true },
+		},
 	},
 
 	t = {
