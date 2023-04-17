@@ -35,9 +35,12 @@ local plugins = {
 		end,
 	},
 	{
-		-- Used with neotest
 		"nvim-lua/plenary.nvim",
 	},
+  {
+    -- To be able to mark often used files and easily get back to them
+    "ThePrimeagen/harpoon"
+  },
 	{
 		-- Setup of the unit testing for dotnet
 		"Issafalcon/neotest-dotnet",
