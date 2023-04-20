@@ -89,6 +89,18 @@ M.harpoon = {
 			end,
 			"toggle harpoon quick menu",
 		},
+		["<C-1>"] = {
+			function()
+				require("harpoon.ui").nav_next()
+			end,
+			"toggle harpoon quick menu",
+		},
+		["<C-2>"] = {
+			function()
+				require("harpoon.ui").nav_prev()
+			end,
+			"toggle harpoon quick menu",
+		},
 	},
 }
 
@@ -110,7 +122,7 @@ M.neotest = {
 		},
 		["<leader>tdb"] = {
 			function()
-        -- netcoredbg needs special strategy
+				-- netcoredbg needs special strategy
 				if vim.bo.filetype == "cs" then
 					require("neotest").run.run({
 						strategy = require("neotest-dotnet.strategies.netcoredbg"),
