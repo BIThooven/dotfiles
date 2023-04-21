@@ -1,5 +1,39 @@
 local plugins = {
 	{
+		"echasnovski/mini.move",
+		version = false,
+		config = function()
+			require("mini.move").setup({
+
+				-- Module mappings. Use `''` (empty string) to disable one.
+				mappings = {
+					-- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.
+					left = "<M-left>",
+					right = "<M-right>",
+					down = "<M-down>",
+					up = "<M-up>",
+
+					-- Move current line in Normal mode
+					line_left = "<M-left>",
+					line_right = "<M-right>",
+					line_down = "<M-down>",
+					line_up = "<M-up>",
+				},
+
+				-- Options which control moving behavior
+				options = {
+					-- Automatically reindent selection during linewise vertical move
+					reindent_linewise = true,
+				},
+			})
+		end,
+		event = "VeryLazy",
+	},
+	{
+		"RRethy/vim-illuminate",
+		event = "VeryLazy",
+	},
+	{
 		-- Setup for lsp and formatting
 		"neovim/nvim-lspconfig",
 
@@ -22,6 +56,7 @@ local plugins = {
 		config = function()
 			require("better_escape").setup()
 		end,
+
 		lazy = false,
 	},
 	{
@@ -37,10 +72,10 @@ local plugins = {
 	{
 		"nvim-lua/plenary.nvim",
 	},
-  {
-    -- To be able to mark often used files and easily get back to them
-    "ThePrimeagen/harpoon"
-  },
+	{
+		-- To be able to mark often used files and easily get back to them
+		"ThePrimeagen/harpoon",
+	},
 	{
 		-- Setup of the unit testing for dotnet
 		"Issafalcon/neotest-dotnet",
@@ -59,16 +94,11 @@ local plugins = {
 		},
 	},
 	{
-		-- TODO: Is this really necessary?!
 		"folke/neodev.nvim",
 		config = function()
 			require("custom.configs.neodev")
 		end,
 	},
-	-- {
-	-- Used for neotest
-	-- "nvim-lua/plenary.nvim"
-	-- },
 	{
 		-- UI for debugging
 		"rcarriga/nvim-dap-ui",
