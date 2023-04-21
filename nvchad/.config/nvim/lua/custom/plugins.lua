@@ -8,16 +8,16 @@ local plugins = {
 				-- Module mappings. Use `''` (empty string) to disable one.
 				mappings = {
 					-- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.
-					left = "<M-left>",
-					right = "<M-right>",
-					down = "<M-down>",
-					up = "<M-up>",
+					left = "<A-left>",
+					right = "<A-right>",
+					down = "<A-down>",
+					up = "<A-up>",
 
 					-- Move current line in Normal mode
-					line_left = "<M-left>",
-					line_right = "<M-right>",
-					line_down = "<M-down>",
-					line_up = "<M-up>",
+					line_left = "<A-left>",
+					line_right = "<A-right>",
+					line_down = "<A-down>",
+					line_up = "<A-up>",
 				},
 
 				-- Options which control moving behavior

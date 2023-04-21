@@ -28,6 +28,28 @@ M.general = {
 	},
 }
 
+M.minimove = {
+	n = {
+    -- command is :lua require("mini.move").move_line('up') [for up]
+
+		-- Keymaps for mini.move are in the setup for the plugin until I solve the issue to put it here
+		["<A-Left>"] = { "", "move line left" },
+		["<A-Right>"] = { "", "move line right" },
+		["<A-Down>"] = { "", "move line down" },
+		["<A-Up>"] = { "", "move line up" },
+	},
+
+	v = {
+    -- command is :lua require("mini.move").move('up') [for up]
+
+		-- Keymaps for mini.move are in the setup for the plugin until I solve the issue to put it here
+		["<A-Left>"] = { "", "move selection left" },
+		["<A-Right>"] = { "", "move selection right" },
+		["<A-Down>"] = { "", "move selection down" },
+		["<A-Up>"] = { "", "move selection up" },
+	},
+}
+
 M.trouble = {
 	n = {
 		["<leader>ww"] = {
