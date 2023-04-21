@@ -1,3 +1,3 @@
 function vimconf
-~/.config/nvim/
+~/.config/nvim/lua/
 end
