@@ -8,6 +8,11 @@ M.general = {
 	n = {
 		["l"] = { "o<ESC>", "newline after cursor" },
 		["L"] = { "O<ESC>", "newline before cursor" },
+
+    ["<C-left>"] = { "<C-w>h", "window left" },
+		["<C-right>"] = { "<C-w>l", "window right" },
+		["<C-down>"] = { "<C-w>j", "window down" },
+		["<C-up>"] = { "<C-w>k", "window up" },
 	},
 
 	t = {
