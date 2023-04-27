@@ -33,6 +33,12 @@ M.general = {
 	},
 }
 
+M.copilot = {
+  i = {
+    ["<A-l>"] = { "", "complete suggestion from copilot" },
+  },
+}
+
 M.minimove = {
 	n = {
     -- command is :lua require("mini.move").move_line('up') [for up]
