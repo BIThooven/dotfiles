@@ -1,5 +1,9 @@
 local plugins = {
   {
+    "weilbith/nvim-code-action-menu",
+    cmd = "CodeActionMenu",
+  },
+  {
     "chrisgrieser/nvim-early-retirement",
     config = function()
       require("custom.configs.nvim-early-retirement")
