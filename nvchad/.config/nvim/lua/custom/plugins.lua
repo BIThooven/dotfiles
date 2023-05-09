@@ -1,12 +1,51 @@
 local plugins = {
   {
-    "chrisgrieser/nvim-early-retirement",
+    -- Code actions in telescope
+    "aznhe21/actions-preview.nvim",
     config = function()
-      require("custom.configs.nvim-early-retirement")
     end,
     event = "VeryLazy",
   },
   {
+    -- Focus on one file
+    "folke/zen-mode.nvim",
+    config = function()
+      require("zen-mode").setup({})
+    end,
+    event = "VeryLazy",
+  },
+  {
+    -- Dim everything but the current function where cursor resides
+    "folke/twilight.nvim",
+    config = function()
+      require("twilight").setup({})
+    end,
+    event = "VeryLazy",
+  },
+  {
+    -- Astro support
+    "wuelnerdotexe/vim-astro",
+    event = "BufRead",
+  },
+  {
+    -- Show all todo comments in solution
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup({})
+    end,
+    event = "VeryLazy",
+  },
+  {
+    -- Clean up buffer line from inactive buffers
+    "chrisgrieser/nvim-early-retirement",
+    config = function()
+      require("custom.configs.nvim-early-retirement")
+    end,
+    event = "BufRead",
+  },
+  {
+    -- Copilot plugin
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     event = "InsertEnter",
@@ -16,28 +55,12 @@ local plugins = {
     end,
   },
   {
+    -- Move lines and blocks of code
     "echasnovski/mini.move",
     version = false,
     config = function()
       require("mini.move").setup({
-        -- Module mappings. Use `''` (empty string) to disable one.
-        mappings = {
-          -- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.
-          left = "<A-left>",
-          right = "<A-right>",
-          down = "<A-down>",
-          up = "<A-up>",
-
-          -- Move current line in Normal mode
-          line_left = "<A-left>",
-          line_right = "<A-right>",
-          line_down = "<A-down>",
-          line_up = "<A-up>",
-        },
-
-        -- Options which control moving behavior
         options = {
-          -- Automatically reindent selection during linewise vertical move
           reindent_linewise = true,
         },
       })
@@ -45,8 +68,9 @@ local plugins = {
     event = "VeryLazy",
   },
   {
+    -- Highlight similar words in the buffer
     "RRethy/vim-illuminate",
-    event = "VeryLazy",
+    event = "BufRead",
   },
   {
     -- Setup for lsp and formatting
@@ -72,7 +96,7 @@ local plugins = {
       require("better_escape").setup()
     end,
 
-    lazy = false,
+    event = "InsertEnter",
   },
   {
     -- Debug Framework

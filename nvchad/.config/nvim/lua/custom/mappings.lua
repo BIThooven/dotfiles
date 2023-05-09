@@ -33,6 +33,78 @@ M.general = {
   },
 }
 
+M.zenmode = {
+  n = {
+    ["<leader>z"] = {
+      function()
+        require("zen-mode").toggle({ window = { width = 0.8 } })
+      end,
+      "toggle zen mode",
+    },
+  },
+}
+
+M.todocomments = {
+  n = {
+    ["<leader>tc"] = { "<cmd>TodoTelescope<cr>", "toggle todo comments" },
+  },
+}
+
+M.minimove = {
+  n = {
+    ["<A-Left>"] = {
+      function()
+        require("mini.move").move_line("left")
+      end,
+      "move line left",
+    },
+    ["<A-Right>"] = {
+      function()
+        require("mini.move").move_line("right")
+      end,
+      "move line right",
+    },
+    ["<A-Down>"] = {
+      function()
+        require("mini.move").move_line("down")
+      end,
+      "move line down",
+    },
+    ["<A-Up>"] = {
+      function()
+        require("mini.move").move_line("up")
+      end,
+      "move line up",
+    },
+  },
+  v = {
+    ["<A-Left>"] = {
+      function()
+        require("mini.move").move("left")
+      end,
+      "move selection left",
+    },
+    ["<A-Right>"] = {
+      function()
+        require("mini.move").move("right")
+      end,
+      "move selection right",
+    },
+    ["<A-Down>"] = {
+      function()
+        require("mini.move").move("down")
+      end,
+      "move selection down",
+    },
+    ["<A-Up>"] = {
+      function()
+        require("mini.move").move("up")
+      end,
+      "move selection up",
+    },
+  },
+}
+
 M.copilot = {
   i = {
     ["<A-l>"] = { "", "complete suggestion from copilot" },
