@@ -202,7 +202,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # keybinding in fancy rofi (automated):
-bindsym F1 exec ~/.config/i3/scripts/keyhint-2
+# bindsym F1 exec ~/.config/i3/scripts/keyhint-2
 # alternative
 # keybinding list in editor:
 # bindsym $mod+F1 exec xed ~/.config/i3/keybindings
@@ -419,7 +419,7 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 exec --no-startup-id sleep 1 && slack
 exec --no-startup-id sleep 1 && teams-for-linux
 #exec --no-startup-id sleep 1 && discord
-exec --no-startup-id sleep 1 && microsoft-edge-stable
+# exec --no-startup-id sleep 1 && microsoft-edge-stable
 exec --no-startup-id sleep 2 && spotify
 exec --no-startup-id sleep 2 && firefox
 exec --no-startup-id sleep 3 && obsidian
