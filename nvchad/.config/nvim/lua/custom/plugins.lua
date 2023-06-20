@@ -1,9 +1,28 @@
+local mason = require("custom.configs.mason")
+local treesitter = require("custom.configs.treesitter")
+
 local plugins = {
+  {
+    "ggandor/leap.nvim",
+    config = function()
+      require("leap").add_default_mappings()
+    end,
+    event = "VeryLazy",
+  },
+  {
+    -- Just to override and set ensure_installed
+    "nvim-treesitter/nvim-treesitter",
+    opts = treesitter.opts,
+  },
+  {
+    -- Just to override and set ensure_installed
+    "williamboman/mason.nvim",
+    opts = mason.opts,
+  },
   {
     -- Code actions in telescope
     "aznhe21/actions-preview.nvim",
-    config = function()
-    end,
+    config = function() end,
     event = "VeryLazy",
   },
   {
