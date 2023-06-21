@@ -1,3 +1,3 @@
 function kia
-~/dev/kia/
+~/dev/kia/kia-nugets/
 end
