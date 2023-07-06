@@ -3,6 +3,12 @@
 import dbus
 import os
 import sys
+import re
+
+def remove_special_characters(string):
+    pattern = r'[^a-zA-Z0-9 ÅåÄäÖö |.:,;]'
+    cleaned_string = re.sub(pattern, '', string)
+    return cleaned_string
 
 try:
     bus = dbus.SessionBus()
@@ -21,9 +27,10 @@ try:
     props = spotify_iface.Get('org.mpris.MediaPlayer2.Player', 'Metadata')
 
     if (sys.version_info > (3, 0)):
-        print(str(props['xesam:artist'][0]) + " - " + str(props['xesam:title'] + " | "))
+        print(remove_special_characters(props['xesam:artist'][0]) + " - " + remove_special_characters(props['xesam:title']) + " | ")
     else:
         print(props['xesam:artist'][0] + " - " + props['xesam:title'] + " | ").encode('utf-8')
     exit
 except dbus.exceptions.DBusException:
+    print('An exception occured')
     exit
