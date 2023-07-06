@@ -6,7 +6,7 @@ import sys
 import re
 
 def remove_special_characters(string):
-    pattern = r'[^a-zA-Z0-9 ÅåÄäÖö |.:,;]'
+    pattern = r'[^a-zA-Z0-9 ÅåÄäÖö |.:,;()]'
     cleaned_string = re.sub(pattern, '', string)
     return cleaned_string
 
