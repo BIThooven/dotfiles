@@ -114,7 +114,9 @@ M.copilot = {
 M.trouble = {
 	n = {
 		["<leader>ww"] = {
-			"<cmd>TroubleToggle workspace_diagnostics<cr>",
+			function()
+				require("trouble").open("document_diagnostics")
+			end,
 			"toggle trouble with workspace diagnostics",
 			opts = { silent = true, noremap = true },
 		},
@@ -216,35 +218,6 @@ M.neotest = {
 				-- end
 			end,
 			"debug nearest test",
-		},
-	},
-}
-
-M.tabufline = {
-	plugin = true,
-
-	n = {
-		-- cycle through buffers
-		["<tab>"] = {
-			function()
-				require("nvchad_ui.tabufline").tabuflineNext()
-			end,
-			"goto next buffer",
-		},
-
-		["<S-tab>"] = {
-			function()
-				require("nvchad_ui.tabufline").tabuflinePrev()
-			end,
-			"goto prev buffer",
-		},
-
-		-- close buffer + hide terminal buffer
-		["<leader>x"] = {
-			function()
-				require("nvchad_ui.tabufline").close_buffer()
-			end,
-			"close buffer",
 		},
 	},
 }
