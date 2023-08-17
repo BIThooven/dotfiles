@@ -6,8 +6,9 @@ import sys
 import re
 
 def remove_special_characters(string):
-    pattern = r'[^a-zA-Z0-9 ÅåÄäÖö |.:,;()]'
-    cleaned_string = re.sub(pattern, '', string)
+    # pattern = r'[^a-zA-Z0-9 ÅåÄäÖö |.:,;()]'
+    # cleaned_string = re.sub(pattern, '', string)
+    cleaned_string = string.replace('&', '')
     return cleaned_string
 
 try:
