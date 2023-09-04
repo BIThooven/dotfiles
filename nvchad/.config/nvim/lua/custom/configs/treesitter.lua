@@ -7,8 +7,8 @@ M.opts = {
     "css",
     "lua",
     "html",
-    "typescript",
-    "tsx",
+    -- "typescript",
+    -- "tsx",
     "dockerfile",
   },
 }

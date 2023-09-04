@@ -11,7 +11,7 @@ M.opts = {
     "csharpier",
 
     -- Astro
-    "astro-language-server",
+    -- "astro-language-server",
 
     -- HTML
     "prettier",
