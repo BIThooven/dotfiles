@@ -1,3 +1,3 @@
 require("neodev").setup({
-  library = { plugins = { "neotest" }, types = true},
+	library = { plugins = { "neotest" }, types = true },
 })

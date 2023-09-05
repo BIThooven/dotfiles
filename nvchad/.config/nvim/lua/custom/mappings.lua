@@ -20,17 +20,6 @@ M.general = {
 	},
 }
 
-M.zenmode = {
-	n = {
-		["<leader>z"] = {
-			function()
-				require("zen-mode").toggle({ window = { width = 0.8 } })
-			end,
-			"toggle zen mode",
-		},
-	},
-}
-
 M.todocomments = {
 	n = {
 		["<leader>tc"] = { "<cmd>TodoTelescope<cr>", "toggle todo comments" },
@@ -194,15 +183,7 @@ M.neotest = {
 		},
 		["<leader>tdb"] = {
 			function()
-				-- netcoredbg needs special staategy
-				-- if vim.bo.filetype == "cs" then
-				--   require("neotest").run.run({
-				--     strategy = require("neotest-dotnet.strategies.netcoredbg"),
-				--     is_custom_dotnet_debug = true,
-				--   })
-				-- else -- for all others, use regular dap strategy
 				require("neotest").run.run({ strategy = "dap" })
-				-- end
 			end,
 			"debug nearest test",
 		},
@@ -211,28 +192,14 @@ M.neotest = {
 
 M.lspconfig = {
 	plugin = true,
-	-- See `<cmd> :help vim.lsp.*` for documentation on any of the below functions
 
 	n = {
 		["<leader>ca"] = {
 			function()
 				require("actions-preview").code_actions()
-				-- vim.lsp.buf.code_action()
 			end,
 			"lsp code_action",
 		},
-	},
-}
-
-M.nvimtree = {
-	plugin = true,
-
-	n = {
-		-- toggle
-		["<C-n>"] = { "<cmd> NvimTreeToggle <CR>", "toggle nvimtree" },
-
-		-- focus
-		["<leader>e"] = { "<cmd> NvimTreeFocus <CR>", "focus nvimtree" },
 	},
 }
 

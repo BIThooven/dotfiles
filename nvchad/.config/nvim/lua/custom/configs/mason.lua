@@ -10,9 +10,6 @@ M.opts = {
     "omnisharp",
     "csharpier",
 
-    -- Astro
-    -- "astro-language-server",
-
     -- HTML
     "prettier",
 
