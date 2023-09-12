@@ -15,9 +15,9 @@ api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- fix comment on new line
-api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+api.nvim_create_autocmd({ "bufenter", "bufwinenter" }, {
   pattern = { "*" },
   callback = function()
-    vim.cmd([[set formatoptions-=c formatoptions-=r formatoptions-=o]])
+    vim.cmd [[set formatoptions-=c formatoptions-=r formatoptions-=o]]
   end,
 })
