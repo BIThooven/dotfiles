@@ -1,33 +1,39 @@
 local M = {}
 M.ui = {
-  theme = "catppuccin",
-  nvdash = {
-    load_on_startup = true,
+	theme = "catppuccin",
+	nvdash = {
+		load_on_startup = true,
 
-    header = {
-           "     It's food o'clock!       ",
-           "                          ,    ",
-           "   ,-.       _,---._ __  / \\   ",
-           "  /  )    .-'       `./ /   \\  ",
-           " (  (   ,'            `/    /| ",
-           "  \\  `-\"             \\'\\   / | ",
-           "   `.              ,  \\ \\ /  | ",
-           "    /`.          ,'-`----Y   | ",
-           "   (            ;        |   ' ",
-           "   |  ,-.    ,-'   Cat   |  /  ",
-           "   |  | (   |      food  | /   ",
-           "   )  |  \\  `.___________|/    ",
-           "   `--'   `--'                 ",
-    },
+		header = {
+			"              It's             ",
+			"             ALWAYS            ",
+			"         food o'clock!         ",
+			"                          ,    ",
+			"   ,-.       _,---._ __  / \\   ",
+			"  /  )    .-'       `./ /   \\  ",
+			" (  (   ,'            `/    /| ",
+			"  \\  `-\"             \\'\\   / | ",
+			"   `.              ,  \\ \\ /  | ",
+			"    /`.          ,'-`----Y   | ",
+			"   (            ;        |   ' ",
+			"   |  ,-.    ,-'   Cat   |  /  ",
+			"   |  | (   |      food  | /   ",
+			"   )  |  \\  `.___________|/    ",
+			"   `--'   `--'                 ",
+		},
 
-    buttons = {
-      { "  Find Files", "Spc f f", "Telescope find_files" },
-      { "󰈚  Recent Files", "Spc f o", "Telescope oldfiles" },
-      { "󰈭  Find Word", "Spc f w", "Telescope live_grep" },
-      { "  Mappings", "Spc c h", "NvCheatsheet" },
-    },
+		buttons = {
+			{ "  Find Files", "Spc f f", "Telescope find_files" },
+			{ "󰈚  Recent Files", "Spc f o", "Telescope oldfiles" },
+			{ "󰈭  Find Word", "Spc f w", "Telescope live_grep" },
+			{ "  Mappings", "Spc c h", "NvCheatsheet" },
+		},
+	},
 
-  },
+  -- Disable tabufline
+	tabufline = {
+		enabled = false,
+	},
 }
 
 -- read the custom plugins
