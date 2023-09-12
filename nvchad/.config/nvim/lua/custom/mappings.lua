@@ -2,6 +2,15 @@
 
 local M = {}
 
+M.nvimtree = {
+	plugin = true,
+
+	n = {
+		-- !!! temporary disable !!!
+		["<leader>e"] = { ':echo "Use Telescope!" <CR>', "Focus nvimtree" },
+	},
+}
+
 M.general = {
 	i = {},
 
@@ -18,6 +27,17 @@ M.general = {
 	t = {
 		["<C-x>"] = { vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true), "escape terminal mode" },
 	},
+}
+
+M.zenmode = {
+  n = {
+    ["<leader>z"] = {
+      function()
+        require("zen-mode").toggle()
+      end,
+      "toggle zen mode",
+    },
+  },
 }
 
 M.todocomments = {
@@ -152,15 +172,15 @@ M.harpoon = {
 		},
 		["<C-1>"] = {
 			function()
-				require("harpoon.ui").nav_next()
+				require("harpoon.ui").nav_file(1)
 			end,
-			"toggle harpoon quick menu",
+			"navigate to file 1",
 		},
 		["<C-2>"] = {
 			function()
-				require("harpoon.ui").nav_prev()
+				require("harpoon.ui").nav_file(2)
 			end,
-			"toggle harpoon quick menu",
+			"navigate to file 2",
 		},
 	},
 }
