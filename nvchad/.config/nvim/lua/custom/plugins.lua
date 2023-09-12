@@ -3,6 +3,13 @@ local treesitter = require("custom.configs.treesitter")
 
 local plugins = {
 	{
+		"folke/zen-mode.nvim",
+		config = function()
+			require("zen-mode").setup({})
+		end,
+		-- event = "VeryLazy",
+	},
+	{
 		"ggandor/leap.nvim",
 		config = function()
 			require("leap").add_default_mappings()
