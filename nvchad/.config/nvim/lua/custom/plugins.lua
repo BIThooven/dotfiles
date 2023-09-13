@@ -3,13 +3,14 @@ local treesitter = require("custom.configs.treesitter")
 
 local plugins = {
 	{
+    -- Focus and center the buffer
 		"folke/zen-mode.nvim",
 		config = function()
 			require("zen-mode").setup({})
 		end,
-		-- event = "VeryLazy",
 	},
 	{
+    -- Movement plugin
 		"ggandor/leap.nvim",
 		config = function()
 			require("leap").add_default_mappings()
@@ -42,14 +43,6 @@ local plugins = {
 		event = "VeryLazy",
 	},
 	{
-		-- Clean up buffer line from inactive buffers
-		"chrisgrieser/nvim-early-retirement",
-		config = function()
-			require("custom.configs.nvim-early-retirement")
-		end,
-		event = "BufRead",
-	},
-	{
 		-- Copilot plugin
 		"zbirenbaum/copilot.lua",
 		cmd = "Copilot",
@@ -73,9 +66,12 @@ local plugins = {
 		event = "VeryLazy",
 	},
 	{
-		-- Highlight similar words in the buffer
-		"RRethy/vim-illuminate",
-		event = "BufRead",
+    -- Highlight the word under the cursor
+		"echasnovski/mini.cursorword",
+		config = function()
+			require("mini.cursorword").setup({})
+		end,
+    event = "BufRead",
 	},
 	{
 		-- Setup for lsp and formatting
@@ -151,6 +147,7 @@ local plugins = {
 		end,
 	},
 	{
+    -- Show errors in the solution
 		"folke/trouble.nvim",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
