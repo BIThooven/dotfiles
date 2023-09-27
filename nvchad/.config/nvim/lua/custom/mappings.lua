@@ -8,6 +8,8 @@ M.nvimtree = {
 	n = {
 		-- !!! temporary disable !!!
 		["<leader>e"] = { ':echo "Use Telescope!" <CR>', "Focus nvimtree" },
+
+		["U"] = { "<C-r>", "Undo" },
 	},
 }
 
@@ -30,14 +32,14 @@ M.general = {
 }
 
 M.zenmode = {
-  n = {
-    ["<leader>z"] = {
-      function()
-        require("zen-mode").toggle()
-      end,
-      "toggle zen mode",
-    },
-  },
+	n = {
+		["<leader>z"] = {
+			function()
+				require("zen-mode").toggle()
+			end,
+			"toggle zen mode",
+		},
+	},
 }
 
 M.todocomments = {
