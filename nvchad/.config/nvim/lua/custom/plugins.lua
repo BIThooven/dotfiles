@@ -68,6 +68,15 @@ local plugins = {
 	{
 		-- Highlight the word under the cursor
 		"echasnovski/mini.cursorword",
+		version = false,
+		config = function()
+			require("mini.cursorword").setup({})
+		end,
+		event = "BufRead",
+	},
+	{
+		"echasnovski/mini.ai",
+		version = false,
 		config = function()
 			require("mini.cursorword").setup({})
 		end,
@@ -78,7 +87,7 @@ local plugins = {
 		"neovim/nvim-lspconfig",
 
 		dependencies = {
-			"jose-elias-alvarez/null-ls.nvim",
+			"nvimtools/none-ls.nvim",
 			config = function()
 				require("custom.configs.null-ls")
 			end,
