@@ -6,9 +6,6 @@ M.nvimtree = {
 	plugin = true,
 
 	n = {
-		-- !!! temporary disable !!!
-		["<leader>e"] = { ':echo "Use Telescope!" <CR>', "Focus nvimtree" },
-
 		["U"] = { "<C-r>", "Undo" },
 	},
 }
@@ -24,6 +21,8 @@ M.general = {
 		["<C-right>"] = { "<C-w>l", "window right" },
 		["<C-down>"] = { "<C-w>j", "window down" },
 		["<C-up>"] = { "<C-w>k", "window up" },
+
+		["<leader>q"] = { "<cmd>q<cr>", "quit focused window" },
 	},
 
 	t = {
@@ -183,6 +182,18 @@ M.harpoon = {
 				require("harpoon.ui").nav_file(2)
 			end,
 			"navigate to file 2",
+		},
+		["<C-3>"] = {
+			function()
+				require("harpoon.ui").nav_file(3)
+			end,
+			"navigate to file 3",
+		},
+		["<C-4>"] = {
+			function()
+				require("harpoon.ui").nav_file(4)
+			end,
+			"navigate to file 4",
 		},
 	},
 }
