@@ -7,7 +7,6 @@ local sources = {
 	formatting.csharpier,
 	formatting.stylua,
 	formatting.prettier.with({ filetypes = { "html", "markdown", "css" } }), -- so prettier works only on these filetypes
-	formatting.tidy,
 
 	lint.shellcheck,
 }
