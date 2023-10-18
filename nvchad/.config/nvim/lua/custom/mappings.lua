@@ -2,18 +2,12 @@
 
 local M = {}
 
-M.nvimtree = {
-	plugin = true,
-
-	n = {
-		["U"] = { "<C-r>", "Undo" },
-	},
-}
-
 M.general = {
 	i = {},
 
 	n = {
+		["U"] = { "<C-r>", "Undo" },
+
 		["l"] = { "o<ESC>", "newline after cursor" },
 		["L"] = { "O<ESC>", "newline before cursor" },
 
@@ -44,6 +38,37 @@ M.zenmode = {
 M.todocomments = {
 	n = {
 		["<leader>tc"] = { "<cmd>TodoTelescope<cr>", "toggle todo comments" },
+	},
+}
+
+M.minifiles = {
+	plugin = true,
+
+	n = {
+		["<C-n>"] = {
+			function()
+				require("mini.files").open()
+			end,
+			"open file browser",
+		},
+		["<Left>"] = {
+			function()
+				require("mini.files").go_out()
+			end,
+			"go out of directory",
+		},
+		["<Right>"] = {
+			function()
+				require("mini.files").go_in()
+			end,
+			"go into directory",
+		},
+		["<C-s>"] = {
+			function()
+				require("mini.files").synchronize()
+			end,
+			"save changes",
+		},
 	},
 }
 

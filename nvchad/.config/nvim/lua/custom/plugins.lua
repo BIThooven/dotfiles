@@ -3,6 +3,10 @@ local treesitter = require("custom.configs.treesitter")
 
 local plugins = {
 	{
+		"nvim-tree/nvim-tree.lua",
+		enabled = false,
+	},
+	{
 		-- Focus and center the buffer
 		"folke/zen-mode.nvim",
 		config = function()
@@ -51,6 +55,16 @@ local plugins = {
 		config = function()
 			require("custom.configs.copilot")
 		end,
+	},
+	{
+		-- File manager
+		"echasnovski/mini.files",
+		version = false,
+		config = function()
+			require("core.utils").load_mappings("minifiles")
+			require("mini.files").setup({})
+		end,
+		event = "VeryLazy",
 	},
 	{
 		-- Move lines and blocks of code
