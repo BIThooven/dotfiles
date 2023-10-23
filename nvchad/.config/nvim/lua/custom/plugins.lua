@@ -2,26 +2,30 @@ local mason = require "custom.configs.mason"
 local treesitter = require "custom.configs.treesitter"
 
 local plugins = {
-  -- {
-  --   "stevearc/conform.nvim",
-  --   event = "VeryLazy",
-  --   config = function()
-  --     require("conform").setup {
-  --       format_on_save = {
-  --   -- These options will be passed to conform.format()
-  --   timeout_ms = 500,
-  --   lsp_fallback = true,
-  -- },
-  --       formatters = {
-  --         cs = {
-  --           -- Change where to find the command
-  --           command = "/home/jesper/.local/share/nvim/mason/bin/dotnet-csharpier",
-  --           args = { "--write-stdout" },
-  --         },
-  --       },
-  --     }
-  --   end,
-  -- },
+  {
+    "stevearc/conform.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("conform").setup {
+        format_on_save = {
+          timeout_ms = 500,
+          lsp_fallback = true,
+        },
+        formatters = {
+          csharpier = {
+            command = "dotnet-csharpier",
+            args = "--write-stdout",
+            stdin = true,
+          },
+        },
+        formatters_by_ft = {
+          cs = { "csharpier" },
+          lua = { "stylua" },
+          md = { "prettier" },
+        },
+      }
+    end,
+  },
   {
     "nvim-tree/nvim-tree.lua",
     enabled = false,
@@ -126,12 +130,12 @@ local plugins = {
     -- Setup for lsp and formatting
     "neovim/nvim-lspconfig",
 
-    dependencies = {
-      "nvimtools/none-ls.nvim",
-      config = function()
-        require "custom.configs.null-ls"
-      end,
-    },
+    -- dependencies = {
+    --   "nvimtools/none-ls.nvim",
+    --   config = function()
+    --     require "custom.configs.null-ls"
+    --   end,
+    -- },
 
     -- The setup of the different lsps
     config = function()
