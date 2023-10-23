@@ -21,7 +21,7 @@ local plugins = {
         formatters_by_ft = {
           cs = { "csharpier" },
           lua = { "stylua" },
-          md = { "prettier" },
+          markdown = { "prettier" },
         },
       }
     end,
