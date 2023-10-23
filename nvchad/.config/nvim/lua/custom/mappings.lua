@@ -21,6 +21,7 @@ M.general = {
 
 	t = {
 		["<C-x>"] = { vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true), "escape terminal mode" },
+		["<C-d>"] = { '<cmd>echo "Use Toggle!"<cr>', "disable killing terminal" },
 	},
 }
 
@@ -51,24 +52,7 @@ M.minifiles = {
 			end,
 			"open file browser",
 		},
-		["<Left>"] = {
-			function()
-				require("mini.files").go_out()
-			end,
-			"go out of directory",
-		},
-		["<Right>"] = {
-			function()
-				require("mini.files").go_in()
-			end,
-			"go into directory",
-		},
-		["<C-s>"] = {
-			function()
-				require("mini.files").synchronize()
-			end,
-			"save changes",
-		},
+		-- find the mappings in the setup of the plugin in plugins.lua
 	},
 }
 
