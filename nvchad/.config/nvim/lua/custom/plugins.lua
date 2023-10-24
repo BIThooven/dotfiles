@@ -5,26 +5,7 @@ local plugins = {
   {
     "stevearc/conform.nvim",
     event = "VeryLazy",
-    config = function()
-      require("conform").setup {
-        format_on_save = {
-          timeout_ms = 500,
-          lsp_fallback = true,
-        },
-        formatters = {
-          csharpier = {
-            command = "dotnet-csharpier",
-            args = "--write-stdout",
-            stdin = true,
-          },
-        },
-        formatters_by_ft = {
-          cs = { "csharpier" },
-          lua = { "stylua" },
-          markdown = { "prettier" },
-        },
-      }
-    end,
+    opts = require("custom.configs.conform").opts,
   },
   {
     "nvim-tree/nvim-tree.lua",
