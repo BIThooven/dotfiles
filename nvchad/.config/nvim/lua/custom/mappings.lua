@@ -17,6 +17,7 @@ M.general = {
 		["<C-up>"] = { "<C-w>k", "window up" },
 
 		["<leader>q"] = { "<cmd>q<cr>", "quit focused window" },
+		["<leader>x"] = { "<cmd>bd<cr>", "close current buffer" },
 	},
 
 	t = {
