@@ -17,6 +17,7 @@ M.opts = {
 		cs = { "csharpier" },
 		lua = { "stylua" },
 		markdown = { "prettier", "injected" },
+		json = { "prettier" },
 	},
 }
 
