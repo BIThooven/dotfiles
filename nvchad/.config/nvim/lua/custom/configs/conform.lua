@@ -10,6 +10,7 @@ M.opts = {
 		lua = { "stylua" },
 		markdown = { "prettier", "injected" },
 		json = { "prettier" },
+		xml = { "xmlformat" },
 	},
 }
 
