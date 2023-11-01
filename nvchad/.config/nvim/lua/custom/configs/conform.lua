@@ -5,6 +5,12 @@ M.opts = {
 		timeout_ms = 500,
 		lsp_fallback = true,
 	},
+	formatters = {
+		xmlformat = {
+			cmd = { "xmlformat" },
+			args = { "--selfclose", "-" },
+		},
+	},
 	formatters_by_ft = {
 		cs = { "csharpier" },
 		lua = { "stylua" },
