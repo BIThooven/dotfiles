@@ -1,13 +1,12 @@
-local mason = require "custom.configs.mason"
-local treesitter = require "custom.configs.treesitter"
-
 local plugins = {
   {
+    -- Code formatter
     "stevearc/conform.nvim",
-    event = "VeryLazy",
     opts = require("custom.configs.conform").opts,
+    event = "VeryLazy",
   },
   {
+    -- Disable nvim-tree that is included in NvChad
     "nvim-tree/nvim-tree.lua",
     enabled = false,
   },
@@ -29,12 +28,12 @@ local plugins = {
   {
     -- Just to override and set ensure_installed
     "nvim-treesitter/nvim-treesitter",
-    opts = treesitter.opts,
+    opts = require("custom.configs.treesitter").opts,
   },
   {
     -- Just to override and set ensure_installed
     "williamboman/mason.nvim",
-    opts = mason.opts,
+    opts = require("custom.configs.mason").opts,
   },
   {
     -- Code actions in telescope
@@ -55,11 +54,10 @@ local plugins = {
     -- Copilot plugin
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
-    event = "InsertEnter",
-
     config = function()
       require "custom.configs.copilot"
     end,
+    event = "InsertEnter",
   },
   {
     -- File manager
@@ -69,8 +67,8 @@ local plugins = {
       require("core.utils").load_mappings "minifiles"
       require("mini.files").setup {
         mappings = {
-          go_in = "<Right>",
-          go_out = "<Left>",
+          go_in_plus = "<Right>",
+          go_out_plus = "<Left>",
           synchronize = "<C-s>",
         },
       }
@@ -111,13 +109,6 @@ local plugins = {
     -- Setup for lsp and formatting
     "neovim/nvim-lspconfig",
 
-    -- dependencies = {
-    --   "nvimtools/none-ls.nvim",
-    --   config = function()
-    --     require "custom.configs.null-ls"
-    --   end,
-    -- },
-
     -- The setup of the different lsps
     config = function()
       require "plugins.configs.lspconfig"
@@ -130,7 +121,6 @@ local plugins = {
     config = function()
       require("better_escape").setup()
     end,
-
     event = "InsertEnter",
   },
   {
@@ -141,6 +131,17 @@ local plugins = {
     },
     config = function()
       require "custom.configs.nvim-dap"
+    end,
+    event = "VeryLazy",
+  },
+  {
+    -- UI for debugging
+    "rcarriga/nvim-dap-ui",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+    },
+    config = function()
+      require "custom.configs.nvim-dap-ui"
     end,
   },
   {
@@ -169,16 +170,6 @@ local plugins = {
     "folke/neodev.nvim",
     config = function()
       require "custom.configs.neodev"
-    end,
-  },
-  {
-    -- UI for debugging
-    "rcarriga/nvim-dap-ui",
-    dependencies = {
-      "mfussenegger/nvim-dap",
-    },
-    config = function()
-      require "custom.configs.nvim-dap-ui"
     end,
   },
   {
