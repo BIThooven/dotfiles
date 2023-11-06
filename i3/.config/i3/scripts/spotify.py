@@ -3,11 +3,8 @@
 import dbus
 import os
 import sys
-import re
 
 def remove_special_characters(string):
-    # pattern = r'[^a-zA-Z0-9 ÅåÄäÖö |.:,;()]'
-    # cleaned_string = re.sub(pattern, '', string)
     cleaned_string = string.replace('&', '')
     return cleaned_string
 
@@ -33,5 +30,5 @@ try:
         print(props['xesam:artist'][0] + " - " + props['xesam:title'] + " | ").encode('utf-8')
     exit
 except dbus.exceptions.DBusException:
-    print('An exception occured')
+    # Write nothing
     exit
