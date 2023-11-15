@@ -17,6 +17,7 @@ M.opts = {
 		markdown = { "prettier", "injected" },
 		json = { "prettier" },
 		xml = { "xmlformat" },
+		yaml = { "yamlfix" },
 	},
 }
 

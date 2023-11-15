@@ -15,6 +15,9 @@ M.opts = {
 
 		-- xml stuff
 		"xmlformat",
+
+		-- yaml
+		"yamlfix",
 	},
 }
 

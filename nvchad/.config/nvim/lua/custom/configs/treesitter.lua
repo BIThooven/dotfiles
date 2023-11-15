@@ -9,6 +9,7 @@ M.opts = {
 		"dockerfile",
 		"markdown",
 		"markdown_inline",
+		"yaml",
 	},
 }
 
