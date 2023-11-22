@@ -30,7 +30,8 @@ M.projektgunnar = {
   n = {
     ["<leader>pap"] = { "<cmd>AddPackagesToProject<cr>", "Add packages to project" },
     ["<leader>par"] = { "<cmd>AddProjectReference<cr>", "Add project reference to other project" },
-    ["<leader>pup"] = { "<cmd>UpdatePackagesInSolution<cr>", "Update packages in project" },
+    ["<leader>pup"] = { "<cmd>UpdatePackagesInProject<cr>", "Update packages in project" },
+    ["<leader>pus"] = { "<cmd>UpdatePackagesInSolution<cr>", "Update packages in solution" },
   },
 }
 
