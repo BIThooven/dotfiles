@@ -1,5 +1,10 @@
 local plugins = {
   {
+    -- Handle dotnet packages and references
+    "JesperLundberg/projektgunnar.nvim",
+    event = "VeryLazy",
+  },
+  {
     -- Code formatter
     "stevearc/conform.nvim",
     opts = require("custom.configs.conform").opts,

@@ -26,6 +26,14 @@ M.general = {
   },
 }
 
+M.projektgunnar = {
+  n = {
+    ["<leader>pap"] = { "<cmd>AddPackagesToProject<cr>", "Add packages to project" },
+    ["<leader>par"] = { "<cmd>AddProjectReference<cr>", "Add project reference to other project" },
+    ["<leader>pup"] = { "<cmd>UpdatePackagesInSolution<cr>", "Update packages in project" },
+  },
+}
+
 M.zenmode = {
   n = {
     ["<leader>z"] = {
