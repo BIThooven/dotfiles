@@ -13,11 +13,12 @@ M.opts = {
 	},
 	formatters_by_ft = {
 		cs = { "csharpier" },
+		html = { "prettier" },
+		json = { "prettier" },
 		lua = { "stylua" },
 		markdown = { "prettier", "injected" },
-		json = { "prettier" },
 		xml = { "xmlformat" },
-		yaml = { "yamlfix" },
+		-- yaml = { "yamlfix" },
 	},
 }
 
