@@ -19,4 +19,4 @@ match = pattern.search(command_output)
 # If a match is found, print the battery percentage
 if match:
     battery_percentage = match.group(1)
-    print(battery_percentage + "%")
+    print(" " + battery_percentage + "%")
