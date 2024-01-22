@@ -68,6 +68,21 @@ local plugins = {
     event = "InsertEnter",
   },
   {
+    -- Show messages in notification box in upper right corner
+    "echasnovski/mini.notify",
+    version = false,
+    config = function()
+      local notify = require "mini.notify"
+      notify.setup()
+      vim.notify = notify.make_notify {
+        ERROR = { duration = 2000 },
+        WARN = { duration = 2000 },
+        INFO = { duration = 2000 },
+      }
+    end,
+    event = "VeryLazy",
+  },
+  {
     -- File manager
     "echasnovski/mini.files",
     version = false,
