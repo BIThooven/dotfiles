@@ -1,3 +1,0 @@
-function dots
-~/dotfiles/
-end
